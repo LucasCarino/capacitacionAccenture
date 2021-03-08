@@ -223,10 +223,18 @@ listarButton.addEventListener('click', () => {
             <h4>Nacimiento: ${dato.nacimiento}</h4>
             <h4>Telefono: ${dato.telefono}</h4>
             <h4>Email: ${dato.email}</h4>
-        `;
+            `
+            if(parseInt(dato.nota) > 100) {
+                listaAlumnos.innerHTML += `
+                    <h4>Este usuario está aprobado</h4>
+                `
+            } else {
+                listaAlumnos.innerHTML += `
+                <h4>Este usuario no está aprobado</h4>
+            `
+            }
+        })
     })
-})
-
 
 let buscarAlumno = {
     buscarDNI: function () {
