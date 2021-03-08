@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+    <title>Ejercicio - 8/3</title>
+</head>
+<body>
+    <form id="formulario">
+        <label for="nombre">Ingrese su nombre</label>
+        <input type="text" name="nombre" id="nombre">
+        <label for="dni">Ingrese su DNI</label>
+        <input type="number" name="dni" id="dni">
+        <label for="nacimiento">Ingrese su fecha de nacimiento</label>
+        <input type="date" name="nacimiento" id="nacimiento">
+        <label for="telefono">Ingrese su telefono</label>
+        <input type="number" name="telefono" id="telefono">
+        <label for="email">Ingrese su correo electrónico</label>
+        <input type="text" name="email" id="email">
+        
+        <label for="curso">Ingrese su curso</label>
+        <select name="curso" id="curso">
+            <option value="0">CursoA</option>
+            <option value="1">CursoB</option>
+            <option value="2">CursoC</option>
+        </select>
+
+        <label for="legajo">Ingrese su numero de legajo</label>
+        <input type="text" name="legajo" id="legajo">
+        <button id="generarLegajo">Generar número de legajo</button>
+        <button id="formularioButton">Ingresar ahora</button>
+    </form>
+    <main id="container" style="display: none">
+        <nav id="menuOperaciones">
+            <button id="materiasButton">Materias</button>
+            <button id="buscarButton">Buscar Alumno</button>
+            <button id="listarButton">Listar Alumno</button>
+            <form action="https://google.com" method="GET" style="width: 25%;">
+                <button id="salirButton" style="width: 100%;"">Salir</button>
+            </form>
+        </nav>
+        <section id="materias" style="display: none; align-items: center;">
+            <h2 style="width: 100%">CALCULAR PROMEDIO</h2>
+            <div style="display: flex; flex-direction: column; flex-wrap: wrap; width: 30%;">
+                <br>
+                <td align="right">CALIFICACIÓN QUÍMICA</td>
+                <td><input type="number" id="quimica"></td>
+                <td align="right">CALIFICACIÓN MATEMATICA</td>
+                <td><input type="number" id="matematica"></td>
+                <td align="right">CALIFICACIÓN CS. SOCIALES</td>
+                <td><input type="number" id="sociales"></td>
+                <td align="right">CALIFICACIÓN FISICA</td>
+                <td><input type="number" id="fisica"></td>
+                <td align="right">CALIFICACIÓN HISTORIA</td>
+                <td><input type="number" id="historia"></td>
+                <td align="right">CALIFICACIÓN BIOLOGÍA</td>
+                <td><input type="number" id="biologia"></td>
+                <td align="right">CALIFICACIÓN INFORMÁTICA</td>
+                <td><input type="number" id="informatica"></td>
+                <td align="right">CALIFICACIÓN IDIOMAS</td>
+                <td><input type="number" id="idioma"></td>
+                <button id="calcularPromedio">Calcular promedio</button>
+            </div>
+                <h3 id="resultadoPromedio"></h3>
+        </section>
+        <section id="buscarAlumno" style="display: none">
+            <h2 style="width: 100%">BUSCAR ALUMNO</h2>
+            <h3>¿Como quieres buscar al alumno?</h3>
+                <button id="buscarDNI">Buscar por DNI</button>
+                <label for="inputDNI" style="display:none">Buscar por DNI</label>
+                <input type="number" id="inputDNI" style="display:none">
+                <h3 id="resultadoDNI"></h3>
+                <button id="buscaDNI" style="display:none">Buscar ahora</button>
+
+                <button id="buscarNombre">Buscar por nombre</button>
+                <label for="inputNombre" style="display:none">Buscar por nombre</label>
+                <input type="text" id="inputNombre" style="display:none">
+                <h3 id="resultadoNombre"></h3>
+                <button id="buscaNombre" style="display:none">Buscar ahora</button>
+
+                <button id="buscarCelular">Buscar por Celular</button>
+                <label for="inputCelular" style="display:none">Buscar por Celular</label>
+                <input type="number" id="inputCelular" style="display:none">
+                <h3 id="resultadoCelular"></h3>
+                <button id="buscaCelular" style="display:none">Buscar ahora</button>
+
+                <button id="buscarEmail">Buscar por Email</button>
+                <label for="inputEmail" style="display:none">Buscar por DNI</label>
+                <input type="email" id="inputEmail" style="display:none">
+                <h3 id="resultadoEmail"></h3>
+                <button id="buscaEmail" style="display:none">Buscar ahora</button>
+        </section>
+        <section id="listarAlumno" style="display:none">
+            <h2>Listado de alumnos</h2>
+            <ul id="listaAlumnos">
+            </ul>
+        </section>
+    </main>
+
+</body>
+</html>
